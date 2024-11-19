@@ -20,8 +20,9 @@ This project was developed as part of the coursework at SAE Institute Geneva. Th
 ---
 
 ## First Scene: Planet System
-
-<img src="/PlanetSystem.gif" alt="Planet System" width="250" height="auto">
+<div style="text-align: center;">
+    <img src="/PlanetSystem.gif" alt="Planet System" width="250" height="auto">
+</div>
 
 ### Description
 
@@ -58,7 +59,9 @@ The first scene features a **Planet System**, where circles representing planets
 
 ## Second Scene: Trigger System
 
+<div style="text-align: center;">
 <img src="/TriggerSystem.gif" alt="Trigger System" width="250" height="auto">
+</div>
 
 ### Description
 
@@ -80,7 +83,9 @@ The **Trigger System** showcases circles and Axis-Aligned Bounding Boxes (AABBs)
 
 ## Third Scene: Collision System
 
+<div style="text-align: center;">
 <img src="/CollisionSystem.gif" alt="Collision System" width="250" height="auto">
+</div>
 
 ### Description
 
@@ -100,7 +105,9 @@ The **Collision System** builds on the previous trigger system. Instead of merel
 
 ## Fourth Scene: Friction System
 
+<div style="text-align: center;">
 <img src="/FrictionSystem.gif" alt="Friction System" width="250" height="auto">
+</div>
 
 ### Description
 
