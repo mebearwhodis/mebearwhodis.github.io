@@ -1,0 +1,95 @@
+---
+import LogoWall from "../components/logo_wall.astro";
+import SkillsList from "../React/SkillsList.tsx";
+---
+
+<section class="text-[var(--white)] mt-12 md:mt-0" id="home">
+  <div class="max-w-5xl mx-auto space-y-8 md:py-36 pb-14">
+    <div class="text-left space-y-4">
+      <p class="text-md md:text-lg text-[var(--white-icon)] shiny-white">
+        Hello, I'm Maxime Roch
+      </p>
+      <div
+        class="flex flex-col lg:flex-row lg:items-center space-y-4 lg:space-y-0 lg:space-x-8 md:gap-4"
+      >
+        <h1
+          class="text-[var(--white)] text-5xl md:text-6xl font-medium text-pretty leading-none"
+        >
+          Student <br /> Game Developer
+        </h1>
+        <p class="text-md md:text-2xl text-[var(--white-icon)]">
+          Currently in my second year of a three-year Bachelor's degree in 
+          <span class="text-[var(--sec)] shiny-sec"
+            >Games Programming</span
+          > at   
+          <a href="https://www.sae.edu/ch-ge/games-programming-diploma-bachelor/" 
+          class="text-[var(--sec)] hover:text-[var(--white)]"
+          target="_blank"
+          rel="noopener noreferrer">
+         SAE Geneva
+       </a>, Switzerland.
+        </p>
+      </div>
+      <div class="flex justify-start gap-2 pt-3 md:pt-6">
+        <a
+          target="_blank"
+          href="https://github.com/mebearwhodis"
+          aria-label="GitHub"
+          class="text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
+        >
+          <img src="/icons/github.svg" alt="GitHub" class="size-8">
+        </a>
+        <!-- <a
+          target="_blank"
+          href="https://linkedin.com/in/hernandezoscar-dev"
+          aria-label="LinkedIn"
+          class="text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="size-8"
+          >
+            <path
+              d="M18.3362 18.339H15.6707V14.1622C15.6707 13.1662 15.6505 11.8845 14.2817 11.8845C12.892 11.8845 12.6797 12.9683 12.6797 14.0887V18.339H10.0142V9.75H12.5747V10.9207H12.6092C12.967 10.2457 13.837 9.53325 15.1367 9.53325C17.8375 9.53325 18.337 11.3108 18.337 13.6245V18.339H18.3362ZM7.00373 8.57475C6.14573 8.57475 5.45648 7.88025 5.45648 7.026C5.45648 6.1725 6.14648 5.47875 7.00373 5.47875C7.85873 5.47875 8.55173 6.1725 8.55173 7.026C8.55173 7.88025 7.85798 8.57475 7.00373 8.57475ZM8.34023 18.339H5.66723V9.75H8.34023V18.339ZM19.6697 3H4.32923C3.59498 3 3.00098 3.5805 3.00098 4.29675V19.7033C3.00098 20.4202 3.59498 21 4.32923 21H19.6675C20.401 21 21.001 20.4202 21.001 19.7033V4.29675C21.001 3.5805 20.401 3 19.6675 3H19.6697Z"
+            ></path>
+          </svg>
+        </a> -->
+        <a
+          href="https://mebearwhodis.itch.io"
+          aria-label="itch.io"
+          target="_blank"
+          class="text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
+        >
+          <img src="/icons/itchio-colour.svg" alt="itch.io" class="size-8">
+        </a>
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=roch.maxime@gmail.com&su=Hello%20Maxime!"
+          aria-label="Email"
+          target="_blank"
+          class="text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
+        >
+          <img src="/icons/gmail-colour.svg" alt="Email" class="size-8">
+        </a>
+      </div>
+    </div>
+
+    <LogoWall />
+
+    <div class="flex flex-col lg:flex-row items-center gap-8">
+      <SkillsList client:load />
+      <div class="flex justify-center md:w-full md:h-[292px] size-[290px] pt-3 md:pt-9 md:ml-16">
+        
+        <!-- <LetterGlitch
+          client:load
+          glitchColors={["#5e4491", "#A476FF", "#241a38"]}
+          glitchSpeed={33}
+          centerVignette={false}
+          outerVignette={true}
+          smooth={true}
+        /> -->
+      </div>
+    </div>
+  </div>
+</section>

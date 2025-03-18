@@ -1,0 +1,23 @@
+What I'd like is:
+* Have subcategories of projects, "Highlighted", "Academic", "Personal" and "Misc".
+* "Highlighted" has only one project so it's wider, the other categories have two side by side
+* Each project is shown like this: 
+    An image or gif with the title under it, 
+    a status (like "In Development"), 
+    a date (and they're ordered by it), 
+    tags, 
+    and a github button like the one present now but on the far right of it. 
+    Also, clicking the image links to another page of the, 
+    and hovering over the image shows the first part of the blog page (the "about" section, probably) 
+
+    three buttons optional:
+    Github, External Link, Itchio. With corresponding icon (I have them as svg)
+        Also, aligned with title
+        and Smaller
+
+        Only do the hover (darken image + display text) when hovering over the IMAGE, not the rest of the "project card" ???
+        
+        Highlighted must take the full width
+
+        the SVG currentColor display as black rather than white?
+

@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+import FormattedDate from "../../components/formatted_date.astro";
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: project,
+  }));
+}
+
+const project = Astro.props;
+const { Content } = await project.render();
+---
+
+<section class="py-12 text-[var(--white)]">
+  <div class="max-w-5xl mx-auto">
+    <h1 class="text-5xl font-bold">{project.data.title}</h1>
+    <p class="text-lg text-[var(--white-icon)] mt-2">
+      <FormattedDate date={project.data.pubDate} /> - {project.data.status}
+    </p>
+    <img src={project.data.heroImage} class="w-full mt-6 rounded-lg" alt={project.data.title} />
+    <p class="mt-4">{project.data.description}</p>
+    <Content />
+    <a href={project.data.githubLink} class="mt-4 block text-[var(--sec)] underline">GitHub Repo</a>
+  </div>
+</section>
