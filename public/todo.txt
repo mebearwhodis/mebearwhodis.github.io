@@ -23,3 +23,4 @@ What I'd like is:
 
 
 Change text ("What I do?")
+Add things in footer.astro (what's in comments, "made with..")

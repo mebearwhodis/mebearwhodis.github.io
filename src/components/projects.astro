@@ -1,13 +1,12 @@
 ---
 import { getCollection } from "astro:content";
-import FormattedDate from "../components/formatted_date.astro";
 import ProjectCard from "../components/project_card.astro";
 
 const sortedProjects = (await getCollection("projects")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
-const groupedProjects = {
+const groupedProjects: Record<string, any[]> = {
   Highlighted: [],
   Academic: [],
   Personal: [],
@@ -47,7 +46,7 @@ const filteredCategories = Object.entries(groupedProjects)
     <!-- Other Categories -->
     {filteredCategories.map(([category, projects]) => (
       category !== "Highlighted" && (
-        <div key={category} class="mb-8">
+        <div class="mb-8">
           <h3 class="text-2xl font-semibold mb-4">{category}</h3>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             {projects.map((project) => (
