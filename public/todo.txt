@@ -24,3 +24,20 @@ What I'd like is:
 
 Change text ("What I do?")
 Add things in footer.astro (what's in comments, "made with..")
+
+Change blog_post.astro, have nav.astro and footer.astro, probably
+change about.astro too
+
+Make it so that if the hero image is a gif it only moves when hovering the mouse?
+
+Change tags
+
+Make my own repo for the opengl scene (and change the link in opengl-renderer.md)
+Change repo name for the physics
+
+Add prononciation for the name (+ button to hear it said?)
+
+Nav has changed, get back to the previous one
+Also colours are weird?
+
+Change icon

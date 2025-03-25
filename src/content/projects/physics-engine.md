@@ -3,11 +3,12 @@ title: 'Physics Engine'
 description: 'A small 2D Physics Engine developed in C++'
 pubDate: 'Nov 19 2024'
 updatedDate: 'Feb 11 2025'
-heroImage: '/physicsengine-heroimage.png'
-status: "In Development"
+heroImage: '/physics_engine/PlanetSystem.gif'
+status: "Beta"
 category: "Academic"
 tags: ["React", "Next.js", "Vercel"]
-githubLink: "https://github.com/gothsec/stockin-demo"
+githubLink: "https://github.com/mebearwhodis/temp_name_engine"
+highlighted: true
 ---
 
 ## About
@@ -26,7 +27,7 @@ This project was developed as part of the coursework at SAE Institute Geneva. Th
 
 ## First Scene: Planet System
 <div style="text-align: center;">
-    <img src="/PlanetSystem.gif" alt="Planet System" width="250" height="auto">
+    <img src="/physics_engine/PlanetSystem.gif" alt="Planet System" width="250" height="auto">
 </div>
 
 ### Description
@@ -65,7 +66,7 @@ The first scene features a **Planet System**, where circles representing planets
 ## Second Scene: Trigger System
 
 <div style="text-align: center;">
-<img src="/TriggerSystem.gif" alt="Trigger System" width="250" height="auto">
+<img src="/physics_engine/TriggerSystem.gif" alt="Trigger System" width="250" height="auto">
 </div>
 
 ### Description
@@ -89,7 +90,7 @@ The **Trigger System** showcases circles and Axis-Aligned Bounding Boxes (AABBs)
 ## Third Scene: Collision System
 
 <div style="text-align: center;">
-<img src="/CollisionSystem.gif" alt="Collision System" width="250" height="auto">
+<img src="/physics_engine/CollisionSystem.gif" alt="Collision System" width="250" height="auto">
 </div>
 
 ### Description
@@ -111,7 +112,7 @@ The **Collision System** builds on the previous trigger system. Instead of merel
 ## Fourth Scene: Friction System
 
 <div style="text-align: center;">
-<img src="/FrictionSystem.gif" alt="Friction System" width="250" height="auto">
+<img src="/physics_engine/FrictionSystem.gif" alt="Friction System" width="250" height="auto">
 </div>
 
 ### Description

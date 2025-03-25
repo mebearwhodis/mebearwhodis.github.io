@@ -3,11 +3,11 @@ title: 'OpenGL Renderer'
 description: '3D Scene in OpenGL'
 pubDate: 'Feb 11 2025'
 updatedDate: 'Feb 11 2025'
-heroImage: '/final_scene.png'
-status: "In Development"
+heroImage: '/opengl_scene/final_scene.png'
+status: "Beta"
 category: "Academic"
 tags: ["React", "Next.js", "Vercel"]
-githubLink: "https://github.com/gothsec/stockin-demo"
+githubLink: "https://github.com/SAE-Geneve/opengl_scene_mebearwhodis"
 ---
 
 ## About
@@ -29,7 +29,7 @@ This blogpost will go over a few techniques I implemented with more or less succ
 
 ## Deferred Rendering Pipeline
 <div style="text-align: center;">
-    <img src="/final_scene.png" alt="OpenGL Scene" width="auto" height="auto">
+    <img src="/opengl_scene/final_scene.png" alt="OpenGL Scene" width="auto" height="auto">
 </div>
 
 ### Description
@@ -57,7 +57,7 @@ The different passes I decided to implement are as follows:
 ## Cascaded Shadow Maps 
 
 <div style="text-align: center;">
-<img src="/csm.png" alt="Cascaded Shadow Maps" width="auto" height="auto">
+<img src="/opengl_scene/csm.png" alt="Cascaded Shadow Maps" width="auto" height="auto">
 </div>
 
 ### Description
@@ -78,7 +78,7 @@ To optimize the rendering of the shadows, we can reducec the quality of those th
 ## Geometry Pass
 
 <div style="text-align: center;">
-<img src="/normalmap.png" alt="Geometry Pass" width="auto" height="auto">
+<img src="/opengl_scene/normalmap.png" alt="Geometry Pass" width="auto" height="auto">
 </div>
 
 ### Description
@@ -96,7 +96,7 @@ The Geometry Pass is used for deferred rendering and consists in storing the pos
 ## Profiling
 
 <div style="text-align: center;">
-<img src="/tracy_begin.jpg" alt="Begin" width="1000" height="auto">
+<img src="/opengl_scene/tracy_begin.jpg" alt="Begin" width="1000" height="auto">
 </div>
 
 ### Begin Function
@@ -104,7 +104,7 @@ The Geometry Pass is used for deferred rendering and consists in storing the pos
 The start of the program is quite long (6,35 seconds) because it needs to load all models and textures from the disk. This is expected because I used more than a dozen of models. Initializing the future passes only takes a very short percentage of the total time. 
 
 <div style="text-align: center;">
-<img src="/tracy_cpu_update.jpg" alt="CPU Update" width="1000" height="auto">
+<img src="/opengl_scene/tracy_cpu_update.jpg" alt="CPU Update" width="1000" height="auto">
 </div>
 
 ### Update on the CPU-side
@@ -112,7 +112,7 @@ The start of the program is quite long (6,35 seconds) because it needs to load a
 On the CPU side, what takes most of the update time is the "Update Camera & Animation" function, because of the animation part. The second thing that takes the most time, as expected, is the Shadow Pass, since CSM requires to recalculate the layers based on the view position.
 
 <div style="text-align: center;">
-<img src="/tracy_gpu_update.jpg" alt="GPU Update" width="1000" height="auto">
+<img src="/opengl_scene/tracy_gpu_update.jpg" alt="GPU Update" width="1000" height="auto">
 </div>
 
 ### Update on the GPU-side
