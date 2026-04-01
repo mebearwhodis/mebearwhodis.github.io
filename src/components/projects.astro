@@ -29,19 +29,6 @@ const filteredCategories = Object.entries(groupedProjects)
 <section id="projects" class="py-12 border-t border-[#ffffff10] text-[var(--white)]">
   <div class="max-w-5xl mx-auto">
     <h2 class="text-lg text-[var(--sec)] mb-2 shiny-sec">My Work</h2>
-    <h3 class="text-4xl md:text-5xl font-medium mb-8">Projects</h3>
-
-    <!-- Highlighted Projects -->
-    {groupedProjects.Highlighted.length > 0 && (
-      <div class="mb-8">
-        <h3 class="text-2xl font-semibold mb-4">Highlighted</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {groupedProjects.Highlighted.map((project) => (
-            <ProjectCard project={project} />
-          ))}
-        </div>
-      </div>
-    )}
 
     <!-- Other Categories -->
     {filteredCategories.map(([category, projects]) => (

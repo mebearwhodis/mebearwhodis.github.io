@@ -6,7 +6,7 @@ updatedDate: 'Feb 11 2025'
 heroImage: '/opengl_scene/final_scene.png'
 status: "Beta"
 category: "Academic"
-tags: ["React", "Next.js", "Vercel"]
+tags: ["C++", "OpenGL", "3D"]
 githubLink: "https://github.com/SAE-Geneve/opengl_scene_mebearwhodis"
 ---
 

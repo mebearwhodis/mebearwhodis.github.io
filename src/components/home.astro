@@ -1,6 +1,12 @@
 ---
+import { getCollection } from "astro:content";
+import HighlightedCard from "../components/highlighted_card.astro";
 import LogoWall from "../components/logo_wall.astro";
 import SkillsList from "../React/SkillsList.tsx";
+import GitHubIcon from "public/icons/github_icon.astro";
+
+// Get the first highlighted project
+const highlighted = (await getCollection("projects")).find(p => p.data.highlighted);
 ---
 
 <section class="text-[var(--white)] mt-12 md:mt-0" id="home">
@@ -26,8 +32,7 @@ import SkillsList from "../React/SkillsList.tsx";
           class="text-[var(--sec)] hover:text-[var(--white)]"
           target="_blank"
           rel="noopener noreferrer">
-         SAE Geneva
-       </a>, Switzerland.
+         SAE Geneva</a>, Switzerland.
         </p>
       </div>
       <div class="flex justify-start gap-2 pt-3 md:pt-6">
@@ -37,7 +42,7 @@ import SkillsList from "../React/SkillsList.tsx";
           aria-label="GitHub"
           class="text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
         >
-          <img src="/icons/github.svg" alt="GitHub" class="size-8">
+          <GitHubIcon />
         </a>
         <!-- <a
           target="_blank"
@@ -76,19 +81,22 @@ import SkillsList from "../React/SkillsList.tsx";
     </div>
 
     <LogoWall />
-
-    <div class="flex flex-col lg:flex-row items-center gap-8">
-      <SkillsList client:load />
-      <div class="flex justify-center md:w-full md:h-[292px] size-[290px] pt-3 md:pt-9 md:ml-16">
-        
-        <!-- <LetterGlitch
-          client:load
-          glitchColors={["#5e4491", "#A476FF", "#241a38"]}
-          glitchSpeed={33}
-          centerVignette={false}
-          outerVignette={true}
-          smooth={true}
-        /> -->
+    <div class="flex flex-col lg:flex-row items-start gap-8 pt-9">
+      <div class="w-full lg:w-1/2">
+        <SkillsList client:load />
+      </div>
+    
+      <div class="flex flex-col md:w-full md:h-[292px] w-[290px] pt-3 md:pt-9 md:ml-16">
+        {highlighted && (
+          <>
+            <h3 class="text-[var(--white)] text-3xl md:text-4xl font-semibold md:mb-4">
+              Highlighted project
+            </h3>
+            <div class="w-full max-w-md">
+              <HighlightedCard project={highlighted} />
+            </div>
+          </>
+        )}
       </div>
     </div>
   </div>

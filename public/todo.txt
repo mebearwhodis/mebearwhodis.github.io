@@ -1,6 +1,5 @@
 What I'd like is:
 * Have subcategories of projects, "Highlighted", "Academic", "Personal" and "Misc".
-* "Highlighted" has only one project so it's wider, the other categories have two side by side
 * Each project is shown like this: 
     An image or gif with the title under it, 
     a status (like "In Development"), 
@@ -22,22 +21,29 @@ What I'd like is:
         the SVG currentColor display as black rather than white?
 
 
-Change text ("What I do?")
-Add things in footer.astro (what's in comments, "made with..")
 
-Change blog_post.astro, have nav.astro and footer.astro, probably
-change about.astro too
+Top priority:
+* Make other svg as .astro files (maybe put them somewhere else idk?) with custom class to change size
 
-Make it so that if the hero image is a gif it only moves when hovering the mouse?
+Mid priority:
+* Change blog_post.astro, have nav.astro and footer.astro, probably
+    The blog_post should include the date, tags and other info
+* Change about.astro too
 
-Change tags
+* I want the hover to only be effective on the images, not the rest of the card
 
-Make my own repo for the opengl scene (and change the link in opengl-renderer.md)
-Change repo name for the physics
+* Also colours are weird? -> make dark and light theme + switch button in the nav
+    check style in layout.astro -> a lot of things use "--white-icon" as color, make it more clear. 
+    You'll want a white, a grey for contrast, and dark equivalents for light theme
 
-Add prononciation for the name (+ button to hear it said?)
+Low priority:
+* Add things in footer.astro (replace what's in comments, "made with..")
 
-Nav has changed, get back to the previous one
-Also colours are weird?
+* Make my own repo for the opengl scene (and change the link in opengl-renderer.md)
+* Change repo name for the physics
 
-Change icon
+* Add prononciation for the name (+ button to hear it said?)
+
+* Change icon
+
+* Add my current time to Contact?

@@ -4,9 +4,10 @@ description: 'A small 2D Physics Engine developed in C++'
 pubDate: 'Nov 19 2024'
 updatedDate: 'Feb 11 2025'
 heroImage: '/physics_engine/PlanetSystem.gif'
+staticPreviewImage: '/physics_engine/PlanetSystem_frame0.png'
 status: "Beta"
 category: "Academic"
-tags: ["React", "Next.js", "Vercel"]
+tags: ["C++", "Game Engine", "2D"]
 githubLink: "https://github.com/mebearwhodis/temp_name_engine"
 highlighted: true
 ---

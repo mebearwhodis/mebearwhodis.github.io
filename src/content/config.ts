@@ -10,6 +10,7 @@ const projects = defineCollection({
     category: z.enum(["Academic", "Personal", "Misc"]),
     tags: z.array(z.string()).optional(),
     heroImage: z.string().optional(),
+    staticPreviewImage: z.string().optional(),
     githubLink: z.string().optional(),
     itchioLink: z.string().optional(),
     externalLink: z.string().optional(),
